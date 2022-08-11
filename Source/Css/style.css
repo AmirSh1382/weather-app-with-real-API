@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(../Media/img-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-container{
+    width: 90%;
+}
+
+.search-box{
+    position: relative;
+}
+
+.search{
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: #f5f5f5c5;
+    font-size: 17px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.search::placeholder{
+    color: #f5f5f5c5;
+}
+
+.search:focus{
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: none;
+    color: #f5f5f5;
+}
+
+.search-icon{
+    transform: translateY(-50%);
+    color: #f5f5f5c5;
+    font-size: 17px;
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+}
+
+.loader{
+    position: absolute;
+    top: 30%;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    font-size: 17px;
+    border-radius: 50%;
+    color: #f5f5f5c5;
+    border: 3px solid transparent;
+    border-top-color: #f5f5f5c5;
+    animation: loader 1s ease-in-out infinite;
+}
+
+.search-alert{
+    color: rgb(255, 0, 0);
+}
+
+.hide{
+    display: none;
+}
+
+.country-info{
+    height: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.slide-show{
+    height: 100%;
+    overflow: none;
+}
+
+.country-name{
+    color: #f5f5f5;
+    font-size: 35px;
+}
+
+.date{
+    color: #f5f5f5;
+    font-size: 20px;
+}
+
+.temp{
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.6);
+    color: #f5f5f5;
+    font-weight: 500;
+    font-size: 75px;
+}
+
+.client-status{
+    font-style: italic;
+    font-size: 30px;
+    color: #f5f5f5;
+}
+
+.min-max-temp{
+    color: #f5f5f5;
+    font-size: 25px;
+    
+}
+
+@keyframes loader{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
